@@ -15,7 +15,7 @@ class WidgetRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Row(
         children: [
           Container(
@@ -47,16 +47,28 @@ class WidgetRow extends StatelessWidget {
               children: [
                 Text(
                   subtitle,
-                  style: TextStyle(overflow: TextOverflow.ellipsis),
+                  style: TextStyle(
+                      overflow: TextOverflow.ellipsis,
+                      color: Colors.white,
+                      fontSize: 20),
                 ),
-                Text(concepto)
+                Text(
+                  concepto,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 15),
+                )
               ],
             ),
           ),
-          Icon(
-            Icons.check_circle_rounded,
-            size: 30,
-            color: color,
+          Container(
+            padding: EdgeInsets.only(left: 28),
+            child: Icon(
+              Icons.check_circle_rounded,
+              size: 30,
+              color: color,
+            ),
           ),
         ],
       ),
